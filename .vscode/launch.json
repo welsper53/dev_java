@@ -6,6 +6,27 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch JButtonUI",
+      "request": "launch",
+      "mainClass": "dev_java.weak3.makeUI.JButton.JButtonUI",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch JButtonMain",
+      "request": "launch",
+      "mainClass": "dev_java.weak3.makeUI.JButtonMain",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch JTextAreaUI",
+      "request": "launch",
+      "mainClass": "dev_java.weak3.JTextAreaUI",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
       "name": "Launch Sub_2",
       "request": "launch",
       "mainClass": "dev_java.weak3.Sub_2",
