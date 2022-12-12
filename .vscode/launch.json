@@ -6,6 +6,41 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch AddressBook",
+      "request": "launch",
+      "mainClass": "dev_java.weak3.AddressBook.AddressBook",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch JTextAreaUI2",
+      "request": "launch",
+      "mainClass": "dev_java.weak3.makeUI.JTextArea.classTo3.JTextAreaUI2",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch JTextAreaUI_default",
+      "request": "launch",
+      "mainClass": "dev_java.weak3.makeUI.JTextArea.JTextAreaUI_default",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch JTextAreaUI_1",
+      "request": "launch",
+      "mainClass": "dev_java.weak3.makeUI.JTextArea.JTextAreaUI_1",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch JTextAreaUI",
+      "request": "launch",
+      "mainClass": "dev_java.weak3.makeUI.JTextArea.JTextAreaUI",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
       "name": "Launch JTextAreaUI_1",
       "request": "launch",
       "mainClass": "dev_java.weak3.makeUI.JTextAreaUI_1",
