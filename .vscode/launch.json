@@ -1,0 +1,476 @@
+{
+  // IntelliSense를 사용하여 가능한 특성에 대해 알아보세요.
+  // 기존 특성에 대한 설명을 보려면 가리킵니다.
+  // 자세한 내용을 보려면 https://go.microsoft.com/fwlink/?linkid=830387을(를) 방문하세요.
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Launch Sub_2",
+      "request": "launch",
+      "mainClass": "dev_java.weak3.Sub_2",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch Sub_1",
+      "request": "launch",
+      "mainClass": "dev_java.weak3.Sub_1",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch Main",
+      "request": "launch",
+      "mainClass": "dev_java.weak3.Main",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch ButtonArray_2",
+      "request": "launch",
+      "mainClass": "dev_java.view.array.ButtonArray_2",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch ButtonArray",
+      "request": "launch",
+      "mainClass": "dev_java.view.array.ButtonArray",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch GradeDemo",
+      "request": "launch",
+      "mainClass": "dev_java.ch03.d221209.GradeDemo",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch TwoArray2",
+      "request": "launch",
+      "mainClass": "dev_java.ch03.d221209.TwoArray2",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch TwoArray1",
+      "request": "launch",
+      "mainClass": "dev_java.ch03.d221209.TwoArray1",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch Test1",
+      "request": "launch",
+      "mainClass": "dev_java.test.Test1",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch HintPart2",
+      "request": "launch",
+      "mainClass": "dev_java.pattern.HintPart2",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch Nansu1_4",
+      "request": "launch",
+      "mainClass": "dev_java.view.Nansu1_4",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch Nansu1_2",
+      "request": "launch",
+      "mainClass": "dev_java.nansuGame.Nansu1_2",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch RandomGameView",
+      "request": "launch",
+      "mainClass": "dev_java.view.RandomGameView",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch Test",
+      "request": "launch",
+      "mainClass": "dev_java.test.Test",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch test",
+      "request": "launch",
+      "mainClass": "dev_java.test.test",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch HintPart1",
+      "request": "launch",
+      "mainClass": "dev_java.pattern.HintPart1",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch Nansu1_3",
+      "request": "launch",
+      "mainClass": "dev_java.nansuGame.Nansu1_3",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch Nansu1_2",
+      "request": "launch",
+      "mainClass": "dev_java.ch03.Nansu1_2",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch Finally1",
+      "request": "launch",
+      "mainClass": "dev_java.ch03.d221207.Finally1",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch Q54",
+      "request": "launch",
+      "mainClass": "dev_java.ch03.Q54",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch Array3",
+      "request": "launch",
+      "mainClass": "dev_java.ch03.Array3",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch Array2",
+      "request": "launch",
+      "mainClass": "dev_java.ch03.Array2",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch Array1",
+      "request": "launch",
+      "mainClass": "dev_java.ch03.Array1",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch RandomGameView",
+      "request": "launch",
+      "mainClass": "dev_java.ch02.d221206.RandomGameView",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch Shuffle",
+      "request": "launch",
+      "mainClass": "dev_java.ch02.d221206.Shuffle",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch DoWhile",
+      "request": "launch",
+      "mainClass": "dev_java.ch02.d221206.DoWhile",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch NansuMaker",
+      "request": "launch",
+      "mainClass": "dev_java.ch02.d221206.NansuMaker",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch Switch1",
+      "request": "launch",
+      "mainClass": "dev_java.ch02.Switch1",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch Fibonacci",
+      "request": "launch",
+      "mainClass": "dev_java.ch01.d221205.Fibonacci",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch HomeWork",
+      "request": "launch",
+      "mainClass": "dev_java.ch01.d221205.HomeWork",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch Nansu1",
+      "request": "launch",
+      "mainClass": "dev_java.ch01.d221205.Nansu1",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch MemberInit",
+      "request": "launch",
+      "mainClass": "dev_java.ch01.d221205.MemberInit",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch TestExam2",
+      "request": "launch",
+      "mainClass": "dev_java.ch01.d221205.TestExam2",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch Quiz21",
+      "request": "launch",
+      "mainClass": "dev_java.ch01.d221205.Quiz21",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch ScanCal",
+      "request": "launch",
+      "mainClass": "dev_java.ch01.d221205.ScanCal",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch BaseballGameView",
+      "request": "launch",
+      "mainClass": "dev_java.ch01.d221205.BaseballGameView",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch P21_4",
+      "request": "launch",
+      "mainClass": "dev_java.ch01.d221205.P21_4",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch P21_3",
+      "request": "launch",
+      "mainClass": "dev_java.ch01.d221205.P21_3",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch P21_2",
+      "request": "launch",
+      "mainClass": "dev_java.ch01.d221205.P21_2",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch TestExam",
+      "request": "launch",
+      "mainClass": "dev_java.ch01.d221205.TestExam",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch P21_1",
+      "request": "launch",
+      "mainClass": "dev_java.ch01.d221205.P21_1",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch Test",
+      "request": "launch",
+      "mainClass": "dev_java.ch01.d221205.Test",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch StaticExam1",
+      "request": "launch",
+      "mainClass": "dev_java.ch01._221130.StaticExam1",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch ScannerExam1",
+      "request": "launch",
+      "mainClass": "dev_java.ch01_221202.ScannerExam1",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch test",
+      "request": "launch",
+      "mainClass": "dev_java.ch01_221202.test",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch MemberAction",
+      "request": "launch",
+      "mainClass": "dev_java.ch01_221202.MemberAction",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch MemberVO",
+      "request": "launch",
+      "mainClass": "dev_java.ch01_221202.MemberVO",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch MemberVOMain",
+      "request": "launch",
+      "mainClass": "dev_java.ch01_221202.MemberVOMain",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch String1",
+      "request": "launch",
+      "mainClass": "dev_java.ch01.String1",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch PrideMain",
+      "request": "launch",
+      "mainClass": "dev_java.ch01.PrideMain",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch Pride",
+      "request": "launch",
+      "mainClass": "dev_java.ch01.Pride",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch Method2",
+      "request": "launch",
+      "mainClass": "dev_java.ch01.Method2",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch Method1",
+      "request": "launch",
+      "mainClass": "dev_java.ch01.Method1",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch MethodExam",
+      "request": "launch",
+      "mainClass": "dev_java.ch01.MethodExam",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch LoginView",
+      "request": "launch",
+      "mainClass": "dev_java.ch01.LoginView",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch TestClass",
+      "request": "launch",
+      "mainClass": "dev_java.ch01.TestClass",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch TestObject",
+      "request": "launch",
+      "mainClass": "dev_java.ch01.TestObject",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch DeptVOMain",
+      "request": "launch",
+      "mainClass": "dev_java.ch01.DeptVOMain",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch Variable3",
+      "request": "launch",
+      "mainClass": "dev_java.ch01.Variable3",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch Variable2",
+      "request": "launch",
+      "mainClass": "dev_java.ch01.Variable2",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch TestParam",
+      "request": "launch",
+      "mainClass": "dev_java.ch01.TestParam",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch StaticExam2",
+      "request": "launch",
+      "mainClass": "dev_java.ch01.StaticExam2",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch Variable1",
+      "request": "launch",
+      "mainClass": "dev_java.ch01.Variable1",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch StaticExam1",
+      "request": "launch",
+      "mainClass": "dev_java.ch01.StaticExam1",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch Current File",
+      "request": "launch",
+      "mainClass": "${file}"
+    },
+    {
+      "type": "java",
+      "name": "Launch App",
+      "request": "launch",
+      "mainClass": "dev_java.App",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch Hello",
+      "request": "launch",
+      "mainClass": "dev_java.ch01.Hello",
+      "projectName": "app"
+    }
+  ]
+}
