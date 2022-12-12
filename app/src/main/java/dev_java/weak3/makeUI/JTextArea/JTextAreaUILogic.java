@@ -1,4 +1,4 @@
-package dev_java.weak3.makeUI;
+package dev_java.weak3.makeUI.JTextArea;
 
 import javax.swing.JTextArea;
 

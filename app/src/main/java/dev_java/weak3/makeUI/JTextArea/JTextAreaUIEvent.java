@@ -1,4 +1,4 @@
-package dev_java.weak3.makeUI;
+package dev_java.weak3.makeUI.JTextArea;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -19,8 +19,7 @@ public class JTextAreaUIEvent implements ActionListener {
         if (jtaUI.jtf == obj) {
             // JTextField 입력한 문자열 받기
             String input = jtaUI.jtf.getText();
-            jtaUI.jta.append("JTextAreaUI원본: " + input + "\n");
-            jtaUI.jtf.setText("");
+            jtaUI.jtf.setText("JTextAreaUIEvent" + input + "\n");
         }
     }
 }
