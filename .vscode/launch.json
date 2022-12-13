@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch StRecode",
+      "request": "launch",
+      "mainClass": "dev_java.weak3.Homework.StRecode",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
       "name": "Launch AddressDialog_2",
       "request": "launch",
       "mainClass": "dev_java.weak3.AddressBook.ver_2.AddressDialog_2",

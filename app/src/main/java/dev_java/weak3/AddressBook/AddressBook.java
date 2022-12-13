@@ -23,7 +23,7 @@ import javax.swing.JTable;
 import javax.swing.JToolBar;
 import javax.swing.table.DefaultTableModel;
 
-public class AddressBook implements ActionListener{
+public class AddressBook implements ActionListener {
     // ###### [선언부] ######
     JFrame jf_addr = new JFrame();
 
@@ -49,7 +49,6 @@ public class AddressBook implements ActionListener{
     JMenuItem jmi_del = new JMenuItem("삭제");
     JMenuItem jmi_read = new JMenuItem("상세보기");
 
-
     // {JPanel "North"}
     JPanel jp_north = new JPanel();
     // * JButton 초기화
@@ -66,13 +65,12 @@ public class AddressBook implements ActionListener{
     JButton jbtn_upd = new JButton();
     JButton jbtn_read = new JButton();
 
-
     // {JPanel "center"}
     // * BorderLayout 중앙에 테이블(주소록 목록) 추가하기
     JPanel jp_center = new JPanel();
     // (조회 테이블 생성)
     // * 컬럼명 (JTable Header)
-    String[] header = {"번호", "이름", "H.P"};
+    String[] header = { "번호", "이름", "H.P" };
     // * 데이터
     // JTable은 양식만 제공할 뿐이고 데이터를 담을 클래스는 별도로 필요함
     String[][] datas = new String[3][3];
@@ -85,37 +83,35 @@ public class AddressBook implements ActionListener{
     // (스크롤바 생성)
     // DefaultTableModel의 로우수가 많아지는 경우 스크롤바 추가해야함.
     // JScrollPane은 스크롤바를 품고 있는 일종의 속지로 생각함
-    // 첫번째 파라미터는 양식을 가진 JTable이고 
+    // 첫번째 파라미터는 양식을 가진 JTable이고
     // 두번째는 수직 스크롤바 정책을
     // 세번째는 수평 스크롤바 정책을 정해 줌
-    JScrollPane jsp_addr = new JScrollPane(jtb_addr
-    , JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED
-    , JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
+    JScrollPane jsp_addr = new JScrollPane(jtb_addr, JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED,
+            JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
     AddressDialog aDialog = new AddressDialog();
-    
 
     // ###### [생성자] ######
     public AddressBook() {
         System.out.println("디폴트생성자 호출");
         initDiplay();
-    }
+    } // end of AddressBook()
 
     // ActionEvent
     @Override
     public void actionPerformed(ActionEvent e) {
         Object obj = e.getSource();
         // 버튼 ActionListener
-        if (obj==jmi_all) {    // 전체조회-검색
+        if (obj == jmi_all) { // [툴바]전체조회-검색
             String members[][] = {
-                {"1", "이순신", "010-123-456"}
-                , {"2", "강감찬", "010-789-123"}
-                , {"3", "김춘추", "010-456-789"}
+                    { "1", "이순신", "010-123-456" }
+                    , { "2", "강감찬", "010-789-123" }
+                    , { "3", "김춘추", "010-456-789" }
             };
             // 이미 테이블에 조회된 정보가 있는 경우 모두 삭제한다
-            while(dtm_addr.getRowCount() > 0) {
+            while (dtm_addr.getRowCount() > 0) {
                 dtm_addr.removeRow(0);
             }
-            for(int i=0; i<members.length; i++) {
+            for (int i = 0; i < members.length; i++) {
                 Vector<String> oneRow = new Vector<>();
                 oneRow.add(members[i][0]);
                 oneRow.add(members[i][1]);
@@ -124,23 +120,28 @@ public class AddressBook implements ActionListener{
             }
             // 익명 클래스 문법사용
             // -> 자바 람다식, 자바스크립트 Arrow Function 문법과 유사
-            //    코틀린 문법
-            jsp_addr.getVerticalScrollBar().addAdjustmentListener(new AdjustmentListener(){
+            // 코틀린 문법
+            jsp_addr.getVerticalScrollBar().addAdjustmentListener(new AdjustmentListener() {
                 public void adjustmentValueChanged(AdjustmentEvent e) {
-                    JScrollBar jsb = (JScrollBar)e.getSource();
+                    JScrollBar jsb = (JScrollBar) e.getSource();
                     jsb.setValue(jsb.getMaximum());
                 }
             });
-        } else if (obj==jbtn_ins) {     // 입력
-            aDialog.setDialog(jbtn_ins.getText(), true);
-        } else if (obj==jbtn_upd) {     // 수정
-            aDialog.setDialog(jbtn_upd.getText(), true);
-        } else if (obj==jbtn_read) {    // 상세보기
-            aDialog.setDialog(jbtn_read.getText(), true);
+        } else if (obj == jmi_exit) { // [툴바]종료 클릭
+            //// 해당 창만 종료
+            // jf_addr.dispose();
+            //// 전체 애플리케이션 종료
+            System.exit(0);
+        } else if (obj == jbtn_ins || obj == jmi_ins) { // [버튼]입력 클릭
+            aDialog.setDialog("입력", true);
+        } else if (obj == jbtn_upd || obj == jmi_upd) { // [버튼]수정 클릭
+            aDialog.setDialog(jmi_upd.getText(), true);
+        } else if (obj == jbtn_del || obj == jmi_del) { // [버튼]수정 클릭
+            aDialog.setDialog(jmi_del.getText(), true);
+        } else if (obj == jbtn_read || obj == jmi_read) { // [버튼]상세보기 클릭
+            aDialog.setDialog(jmi_read.getText(), true);
         }
-        
-    }
-    
+    } // end of actionPerformed()
 
     // ###### [화면 처리부] ######
     private void initDiplay() {
@@ -150,14 +151,14 @@ public class AddressBook implements ActionListener{
         // Alt + ''
         jm_file.setMnemonic('F');
         jm_edit.setMnemonic('E');
-        
 
         // {버튼 이미지화}
         jbtn_ins.setIcon(new ImageIcon(imgPath + "new.gif"));
         jbtn_upd.setIcon(new ImageIcon(imgPath + "update.gif"));
         jbtn_del.setIcon(new ImageIcon(imgPath + "delete.gif"));
         jbtn_read.setIcon(new ImageIcon(imgPath + "detail.gif"));
-        // * 툴팁 추가
+
+        // {툴바 추가}
         jbtn_ins.setToolTipText("입력");
         jbtn_upd.setToolTipText("수정");
         jbtn_del.setToolTipText("삭제");
@@ -168,10 +169,14 @@ public class AddressBook implements ActionListener{
         jtb.add(jbtn_del);
         jtb.add(jbtn_read);
         jmi_all.addActionListener(this);
-
+        jmi_exit.addActionListener(this);
+        jmi_ins.addActionListener(this);
+        jmi_upd.addActionListener(this);
+        jmi_del.addActionListener(this);
+        jmi_read.addActionListener(this);
 
         // {North 패널 설정}
-        // // JPanel은 FlowLayout이 기본값인데 
+        // // JPanel은 FlowLayout이 기본값인데
         // // 사용자 정의 크기와 위치를 위해 레이아웃을 뭉갠다
         // jp_north.setLayout(new FlowLayout(FlowLayout.LEFT));
         // * 패널에 버튼 추가
@@ -194,7 +199,7 @@ public class AddressBook implements ActionListener{
         // jf_addr.add("North", jp_north);
         jf_addr.add("North", jtb);
         jf_addr.add("Center", jsp_addr);
-    
+
         jmb.add(jm_file);
         jm_file.add(jmi_db);
         jm_file.add(jmi_all);
@@ -206,18 +211,18 @@ public class AddressBook implements ActionListener{
         jm_edit.add(jmi_upd);
         jm_edit.add(jmi_del);
         jm_edit.add(jmi_read);
-        
+
         // 팝업창 아이콘 변경
         jf_addr.setIconImage(titleIcon.getImage());
 
         jf_addr.setJMenuBar(jmb);
         jf_addr.setSize(500, 450);
         jf_addr.setVisible(true);
-    }
-
+    } // end of initDiplay()
 
     // ###### [메인메소드] ######
     public static void main(String[] args) {
         new AddressBook();
-    }
+    } // end of main메소드
 }
+
