@@ -6,6 +6,20 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch AddressDialog_2",
+      "request": "launch",
+      "mainClass": "dev_java.weak3.AddressBook.ver_2.AddressDialog_2",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch AddressBook_2",
+      "request": "launch",
+      "mainClass": "dev_java.weak3.AddressBook.ver_2.AddressBook_2",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
       "name": "Launch AddressBook",
       "request": "launch",
       "mainClass": "dev_java.weak3.AddressBook.AddressBook",
