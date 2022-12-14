@@ -1,6 +1,7 @@
 package dev_java.weak3.Homework;
 
 import java.awt.FlowLayout;
+import java.awt.BorderLayout;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -20,6 +21,8 @@ public class StRecode {
 
     // Panel {North} - 성적처리인원수
     JPanel jp_north = new JPanel();
+    JPanel jp_north1 = new JPanel();
+    JPanel jp_north2 = new JPanel();
     JLabel jl_memo1 = new JLabel("성적처리인원수:");
     JTextField jtf_insert = new JTextField(23);
     JLabel jl_memo2 = new JLabel("명");
@@ -52,20 +55,27 @@ public class StRecode {
     private void initDisplay() {
         System.out.println("GUI 호출");
 
+        // {상단}
+        // jp_north.setLayout(new FlowLayout(FlowLayout.LEFT));
+        jp_north.setLayout(new BorderLayout());
+        jp_north1.setLayout(new BorderLayout());
+        jp_north2.setLayout(new BorderLayout());
         jtf_insert.setLayout(new FlowLayout(FlowLayout.RIGHT));
-        jp_north.add(jl_memo1);
-        jp_north.add(jtf_insert);
-        jp_north.add(jl_memo2);
-        jp_north.add(jbtn_make);
-        jp_north.setLayout(new FlowLayout(FlowLayout.LEFT));
+        jp_north1.add("West",jl_memo1);
+        jp_north.add("Center", jtf_insert);
+        jp_north2.add("Center", jl_memo2);
+        jp_north2.add("East", jbtn_make);
+        jp_north.add("West", jp_north1);
+        jp_north.add("East", jp_north2);
         jbtn_make.addActionListener(recodeLogic);
         jtf_insert.addActionListener(recodeLogic);
         
-        
+        // {중간}
         //datas.addActionListener(recodeLogic);
-        jp_center.add(jsp_recode);
+        jp_center.setLayout(new BorderLayout());
+        jp_center.add("Center", jsp_recode);
 
-
+        // {하단}
         jbtn_oper.addActionListener(recodeLogic);
         jbtn_sam.addActionListener(recodeLogic);
         jbtn_del.addActionListener(recodeLogic);
@@ -77,8 +87,8 @@ public class StRecode {
         jp_south.add(jbtn_exit);
 
 
-        // UI 종료 시 디버깅 종료
-        jf_recode.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        // {JFrame}
+        jf_recode.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // UI 종료 시 디버깅 종료
         jf_recode.setTitle("성적처리");
         jf_recode.add("North", jp_north);
         jf_recode.add("Center", jp_center);

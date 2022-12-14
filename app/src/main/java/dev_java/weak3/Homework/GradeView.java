@@ -6,6 +6,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JScrollBar;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.JTextField;
@@ -14,6 +15,7 @@ import javax.swing.table.DefaultTableColumnModel;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableColumn;
 import java.awt.event.*;
+import java.util.Vector;
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
 
@@ -88,18 +90,22 @@ public class GradeView extends JFrame implements ActionListener {
         jbtn_exit.addActionListener(this);
         jbtn_add.addActionListener(this);
         jbtn_clear.addActionListener(this);
+
         jp1.setLayout(new BorderLayout());
         jp2.setLayout(new BorderLayout());
         jp3.setLayout(new FlowLayout(FlowLayout.RIGHT));
+
         jp1.add("West", jlb_inwon);
         jp1.add("Center", jtf_inwon);
         jp2.add("West", jlb_num);
         jp2.add("Center", jbtn_create);
         jp1.add("East", jp2);
+
         jp3.add(jbtn_account);
         jp3.add(jbtn_add);
         jp3.add(jbtn_clear);
         jp3.add(jbtn_exit);
+
         this.add("North", jp1);
         this.add("South", jp3);
         setTitle("성적처리");
@@ -109,18 +115,8 @@ public class GradeView extends JFrame implements ActionListener {
         setVisible(true);
     }
 
-    public static void main(String[] args) {
-        JFrame.setDefaultLookAndFeelDecorated(true);
-        GradeView gv = new GradeView();
-        gv.initDisplay();
-    }
-
-    @Override
-    public void actionPerformed(ActionEvent e) {
-        if (e.getSource() == jtf_inwon || e.getSource() == jbtn_create) {
-            num = Integer.parseInt(jtf_inwon.getText().trim());
-            System.out.println("num : " + num);
-            dtm = new DefaultTableModel(num, 9);
+    void makeTable(int num) {
+        dtm = new DefaultTableModel(num, 9);
             /*
              * dtm.setValueAt(aValue, row, column); String s = dtm.getValueAt(row, column);
              */
@@ -179,8 +175,52 @@ public class GradeView extends JFrame implements ActionListener {
             this.add("Center", jsp);
             this.validate();
             this.pack();
+
+            for(int i=0; i<dtm.getRowCount(); i++) {
+                for (int j=0; j<6; j++) {
+                    jt.setValueAt("", i, j);
+                }
+            }
+    }
+
+    public static void main(String[] args) {
+        JFrame.setDefaultLookAndFeelDecorated(true);
+        GradeView gv = new GradeView();
+        gv.initDisplay();
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        if (e.getSource() == jtf_inwon || e.getSource() == jbtn_create) {
+            num = Integer.parseInt(jtf_inwon.getText().trim());
+            System.out.println("num : " + num);
+
+            makeTable(num);
+            
         } ////////////// end of if ////////////
         else if (e.getSource() == jbtn_account) {
+            int[] sum = new int[dtm.getRowCount()];
+            double[] avg = new double[dtm.getRowCount()];
+            int[] rank = new int[dtm.getRowCount()];
+
+            for (int i=0; i<dtm.getRowCount(); i++) {
+                for (int j=1; j<=3; j++) {
+                    sum[i] += Integer.parseInt(jt.getValueAt(i, j).toString());
+                }
+                avg[i] = sum[i] / 3;
+            }
+            for (int i=0; i<dtm.getRowCount(); i++) {
+                rank[i] = 1;
+                // 석차
+                for (int j=0; j<dtm.getRowCount(); j++) {
+                    if (avg[i] < avg[j]) {
+                        rank[i] += 1;
+                    }
+                }
+                jt.setValueAt(sum[i], i, 4);
+                jt.setValueAt(avg[i], i, 5);
+                jt.setValueAt(rank[i], i, 6);
+            }
             // 총점과 석차
             // 총점을 구해자
             // 석차를 매겨보자.
@@ -188,11 +228,36 @@ public class GradeView extends JFrame implements ActionListener {
             // 테이블에 반영하기
         } ////////////// end of 처리 버튼 구현
         else if (e.getSource() == jbtn_exit) {
+            System.exit(0);
 
         } else if (e.getSource() == jbtn_add) {
-            String[][] data = { { "홍길동", "80", "75", "85" }, { "이성계", "90", "85", "80" }, { "강감찬", "70", "75", "70" } };
-        } else if (e.getSource() == jbtn_clear) {
+            String[][] data = { { "", "홍길동", "80", "75", "85" }, { "", "이성계", "90", "85", "80" }, { "", "강감찬", "70", "75", "70" } };
 
+            makeTable(3);
+
+
+            // 이미 테이블에 조회된 정보가 있는 경우 모두 삭제한다
+            while (dtm.getRowCount() > 0) {
+                dtm.removeRow(0);
+            }
+            for (int i = 0; i < data.length; i++) {
+                Vector<String> oneRow = new Vector<>();
+                for (int j = 1; j < data[i].length; j++) {
+                    oneRow.add(data[i][j+1]);
+                }
+                dtm.addRow(oneRow);
+            }
+            // 스크롤바
+            jsp.getVerticalScrollBar().addAdjustmentListener(new AdjustmentListener() {
+                public void adjustmentValueChanged(AdjustmentEvent e) {
+                    JScrollBar jsb = (JScrollBar) e.getSource();
+                    jsb.setValue(jsb.getMaximum());
+                }
+            });
+        } else if (e.getSource() == jbtn_clear) {
+            while (dtm.getRowCount() > 0) {
+                dtm.removeRow(0);
+            }
         }
     }
 }

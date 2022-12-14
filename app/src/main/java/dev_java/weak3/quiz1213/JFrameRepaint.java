@@ -1,3 +1,7 @@
+// 2022-12-14
+// 이벤트 호출을 통한 화면 리프레시
+
+
 package dev_java.weak3.quiz1213;
 
 import javax.swing.JButton;

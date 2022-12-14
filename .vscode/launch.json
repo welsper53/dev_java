@@ -6,6 +6,34 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch GradeView",
+      "request": "launch",
+      "mainClass": "dev_java.weak3.Homework.GradeView",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch RectAngle3Main",
+      "request": "launch",
+      "mainClass": "dev_java.weak3.d221214.RectAngle3Main",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch RectAngle2Main",
+      "request": "launch",
+      "mainClass": "dev_java.weak3.d221214.RectAngle2Main",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch RectAngle",
+      "request": "launch",
+      "mainClass": "dev_java.weak3.d221214.RectAngle",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
       "name": "Launch JFrameRepaint",
       "request": "launch",
       "mainClass": "dev_java.weak3.quiz1213.JFrameRepaint",

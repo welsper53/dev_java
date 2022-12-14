@@ -20,7 +20,7 @@ public class StRecodeLogic_1 implements ActionListener {
         Object obj = e.getSource();
 
         // [입력한 숫자만큼 테이블 생성]
-        if (obj == stRecode.jbtn_make) {
+        if (obj == stRecode.jtf_insert || obj == stRecode.jbtn_make) {
             System.out.println("jbtn_make 입력");
             int input = Integer.parseInt(stRecode.jtf_insert.getText());
             String members[][] = new String[input][7];
