@@ -8,10 +8,10 @@ import java.util.Vector;
 
 import javax.swing.JScrollBar;
 
-public class StRecodeLogic implements ActionListener {
+public class StRecodeLogic_1 implements ActionListener {
     StRecode stRecode = null;
 
-    public StRecodeLogic(StRecode stRecode) {
+    public StRecodeLogic_1(StRecode stRecode) {
         this.stRecode = stRecode;
     }
 
@@ -19,6 +19,7 @@ public class StRecodeLogic implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         Object obj = e.getSource();
 
+        // [입력한 숫자만큼 테이블 생성]
         if (obj == stRecode.jbtn_make) {
             System.out.println("jbtn_make 입력");
             int input = Integer.parseInt(stRecode.jtf_insert.getText());
@@ -35,6 +36,12 @@ public class StRecodeLogic implements ActionListener {
                 }
                 stRecode.dtm_recode.addRow(oneRow);
             }
+
+            for(int i=0; i<stRecode.dtm_recode.getRowCount(); i++) {
+                for (int j=0; j<stRecode.dtm_recode.getColumnCount(); j++) {
+                    stRecode.jtb_recode.setValueAt("", i, j);
+                }
+            }
             // 익명 클래스 문법사용
             // -> 자바 람다식, 자바스크립트 Arrow Function 문법과 유사
             // 코틀린 문법
@@ -44,24 +51,24 @@ public class StRecodeLogic implements ActionListener {
                     jsb.setValue(jsb.getMaximum());
                 }
             });
+        } 
 
-        } else if (obj == stRecode.jbtn_oper) {
-            // 표의 성적값 연산
+        // [표의 성적값 연산]
+        else if (obj == stRecode.jbtn_oper) {
             System.out.println("jbtn_oper 입력");
             int[] sum = new int[stRecode.dtm_recode.getRowCount()];
             double[] avg = new double[stRecode.dtm_recode.getRowCount()];
             int[] rank = new int[stRecode.dtm_recode.getRowCount()];
 
-            System.out.println("======= " + stRecode.dtm_recode.getRowCount());
-
+            // 합, 평균 구하기
             for (int i = 0; i < stRecode.dtm_recode.getRowCount(); i++) {
-                rank[i] = 1;
                 for (int j = 1; j <= 3; j++) {
-                    sum[i] += Integer.parseInt(stRecode.datas[i][j]);
-                    avg[i] = sum[i] / 3;
+                    sum[i] += Integer.parseInt(stRecode.jtb_recode.getValueAt(i, j).toString());
+                    avg[i] = sum[i] / 3.0;
                 }
             }
 
+            // 순위 구하기
             for (int i = 0; i < stRecode.dtm_recode.getRowCount(); i++) {
                 rank[i] = 1;
                 for (int n = 0; n < stRecode.dtm_recode.getRowCount(); n++) {
@@ -69,24 +76,16 @@ public class StRecodeLogic implements ActionListener {
                         rank[i] += 1;
                     }
                 }
-                stRecode.datas[i][4] = Integer.toString(sum[i]);
-                stRecode.datas[i][5] = Double.toString(avg[i]);
-                stRecode.datas[i][6] = Integer.toString(rank[i]);
-            }
 
-            // 새로 호출
-            while (stRecode.dtm_recode.getRowCount() > 0) {
-                stRecode.dtm_recode.removeRow(0);
+                // 결과값들 출력
+                stRecode.jtb_recode.setValueAt(sum[i], i, 4);
+                stRecode.jtb_recode.setValueAt(avg[i], i, 5);
+                stRecode.jtb_recode.setValueAt(rank[i], i, 6);
             }
-            for (int i = 0; i < stRecode.datas.length; i++) {
-                Vector<String> oneRow = new Vector<>();
-                for (int j = 0; j < stRecode.datas[i].length; j++) {
-                    oneRow.add(stRecode.datas[i][j]);
-                }
-                stRecode.dtm_recode.addRow(oneRow);
-            }
+        } 
 
-        } else if (obj == stRecode.jbtn_sam) { // 3명 샘플 만들기
+        // [3명 샘플 만들기]
+        else if (obj == stRecode.jbtn_sam) {
             System.out.println("jbtn_sam 입력");
             String members[][] = { { "홍길동", "80", "75", "85" }, { "이성계", "90", "85", "80" },
                     { "강감찬", "70", "75", "70" } };
@@ -111,13 +110,18 @@ public class StRecodeLogic implements ActionListener {
                     jsb.setValue(jsb.getMaximum());
                 }
             });
-        } else if (obj == stRecode.jbtn_del) {
+        } 
+        
+        // [이미 테이블에 조회된 정보가 있는 경우 모두 삭제한다]
+        else if (obj == stRecode.jbtn_del) {
             System.out.println("jbtn_del 입력");
-            // 이미 테이블에 조회된 정보가 있는 경우 모두 삭제한다
             while (stRecode.dtm_recode.getRowCount() > 0) {
                 stRecode.dtm_recode.removeRow(0);
             }
-        } else if (obj == stRecode.jbtn_exit) {
+        } 
+        
+        // GUI 종료
+        else if (obj == stRecode.jbtn_exit) {
             System.out.println("jbtn_exit 입력");
             System.exit(0);
         }

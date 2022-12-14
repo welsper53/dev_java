@@ -15,7 +15,7 @@ import javax.swing.table.DefaultTableModel;
 
 public class StRecode {
     // [선언부]
-    StRecodeLogic recodeLogic = new StRecodeLogic(this);
+    StRecodeLogic_1 recodeLogic = new StRecodeLogic_1(this);
     JFrame jf_recode = new JFrame();
 
     // Panel {North} - 성적처리인원수

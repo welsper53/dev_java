@@ -6,6 +6,27 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch JFrameRepaint",
+      "request": "launch",
+      "mainClass": "dev_java.weak3.quiz1213.JFrameRepaint",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch Main1",
+      "request": "launch",
+      "mainClass": "dev_java.weak3.quiz1213.Main1",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch ExampleTable",
+      "request": "launch",
+      "mainClass": "dev_java.weak3.Homework.ExampleTable",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
       "name": "Launch StRecode",
       "request": "launch",
       "mainClass": "dev_java.weak3.Homework.StRecode",
