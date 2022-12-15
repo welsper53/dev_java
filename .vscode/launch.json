@@ -6,6 +6,76 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch Vector2",
+      "request": "launch",
+      "mainClass": "dev_java.weak3.d221215.Tables.Vector2",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch Vector1",
+      "request": "launch",
+      "mainClass": "dev_java.weak3.d221215.Tables.Vector1",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch HWork3",
+      "request": "launch",
+      "mainClass": "dev_java.weak3.d221215.HWork3",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch DeptTable3",
+      "request": "launch",
+      "mainClass": "dev_java.weak3.d221215.Tables.DeptTable3",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch DeptTable1",
+      "request": "launch",
+      "mainClass": "dev_java.weak3.d221215.Tables.DeptTable1",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch StringCopy",
+      "request": "launch",
+      "mainClass": "dev_java.Tables.StringCopy",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch HWork2",
+      "request": "launch",
+      "mainClass": "dev_java.weak3.d221215.HWork2",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch ArrayCopy1",
+      "request": "launch",
+      "mainClass": "dev_java.Tables.ArrayCopy1",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch HWork1",
+      "request": "launch",
+      "mainClass": "dev_java.weak3.d221215.HWork1",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch JTable5",
+      "request": "launch",
+      "mainClass": "dev_java.weak3.d221215.JTable5",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
       "name": "Launch GradeView",
       "request": "launch",
       "mainClass": "dev_java.weak3.Homework.GradeView",
