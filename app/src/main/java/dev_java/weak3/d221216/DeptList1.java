@@ -19,10 +19,17 @@ public class DeptList1 {
     int deptUpdate(DeptVO pdVO) {
         int result = -1;
         boolean isOk = false;
+        DeptVO imsi = new DeptVO();
 
         for (int i=0; i<vdepts.size(); i++) {
-            if ( pdVO.getDeptno() == vdepts.get(i).getDeptno() ) {
-                isOk = vdepts.set(i, pdVO) != null;
+            imsi = vdepts.get(i);
+            if ( pdVO.getDeptno() == imsi.getDeptno() ) {
+                isOk=true;
+                imsi.setDname(pdVO.getDname());
+                imsi.setLoc(pdVO.getLoc());
+
+                vdepts.remove(i);
+                vdepts.add(i,imsi);
             }
         }
 
@@ -34,11 +41,14 @@ public class DeptList1 {
     // 부서삭제
     int deptDelete(int deptno) {
         int result = -1;
+        DeptVO imsi = new DeptVO();
         boolean isOk = false;
 
         for (int i=0; i<vdepts.size(); i++) {
-            if ( deptno == vdepts.get(i).getDeptno() ) {
-                isOk=vdepts.remove(vdepts.get(i));
+            imsi = vdepts.get(i);
+            if ( deptno == imsi.getDeptno() ) {
+                isOk=true;
+                vdepts.remove(i);
             }
         }
 
