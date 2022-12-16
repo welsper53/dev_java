@@ -6,6 +6,69 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch DeptList1",
+      "request": "launch",
+      "mainClass": "dev_java.weak3.d221216.DeptList1",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch DeptList",
+      "request": "launch",
+      "mainClass": "dev_java.weak3.d221216.DeptList",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch Button2",
+      "request": "launch",
+      "mainClass": "dev_java.weak3.d221216.Button2",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch T1Main",
+      "request": "launch",
+      "mainClass": "dev_java.weak3.d221216.T1Main",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch JTable7Dialog",
+      "request": "launch",
+      "mainClass": "dev_java.weak3.d221216.JTable7Dialog",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch Vector61",
+      "request": "launch",
+      "mainClass": "dev_java.weak3.d221216.Vector61",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch Vector6",
+      "request": "launch",
+      "mainClass": "dev_java.weak3.d221216.Vector6",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch Vector4",
+      "request": "launch",
+      "mainClass": "dev_java.weak3.d221216.Vector4",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch Vector3",
+      "request": "launch",
+      "mainClass": "dev_java.weak3.d221216.Vector3",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
       "name": "Launch Vector2",
       "request": "launch",
       "mainClass": "dev_java.weak3.d221215.Tables.Vector2",

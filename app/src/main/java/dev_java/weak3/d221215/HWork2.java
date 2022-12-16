@@ -8,27 +8,65 @@
 
 package dev_java.weak3.d221215;
 
-import java.util.Random;
-
 public class HWork2 {
+    int[] users = null;
+    int mhap, phap;
 
-    public static void main(String[] args) {
-        Random r = new Random();
-
-        for (int j = 0; j < 10; j++) {
-            int i = r.nextInt(20) - 9;
-            System.out.print(i + " ");
-        }
-
-        System.out.println("======================\n\n");
-
-        int users[] = new int[10];
+    // 메소드 선언하기
+    void setArray() {
+        // Random r = new Random();
+        // for (int j = 0; j < 10; j++) {
+        // int i = r.nextInt(20) - 9;
+        // System.out.print(i + " ");
+        // }
+        users = new int[10];
+        System.out.print("배열 : ");
         for (int i = 0; i < users.length; i++) {
-            users[i] = (int) (Math.random() * 20) % 21 - 10;
+            // Math.random() : 실수형 0.0~1.0
+            users[i] = (int) (Math.random() * 21) % 21 - 10;
             System.out.print(users[i] + " ");
         }
-        System.out.println("======================\n\n");
-        int i = (int) (Math.random());
-        System.out.println((Math.random()*10));
+    }
+
+    void setArray(int size) {
+        users = new int[size];
+        System.out.print("배열 : ");
+        for (int i = 0; i < users.length; i++) {
+            users[i] = (int) (Math.random() * 21) % 21 - 10;
+            System.out.print(users[i] + " ");
+        }
+    }
+
+    void total() {
+        mhap=0;
+        phap=0;
+        for (int i = 0; i < users.length; i++) {
+            if (users[i] < 0) {
+                mhap += users[i];
+            } else if (users[i] > 0) {
+                phap += users[i];
+            } else {
+
+            }
+        }
+        System.out.println("\n음수합 : " + mhap);
+        System.out.println("양수합 : " + phap);
+
+    }
+
+    // 난수 수집 체크
+    void nansuPrint() {
+        // insert here
+
+    }
+
+    public static void main(String[] args) {
+        HWork2 hw2 = new HWork2();
+
+        hw2.setArray();
+        hw2.total();
+
+        hw2.setArray(5);
+        hw2.total();
     }
 }
