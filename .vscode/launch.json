@@ -6,6 +6,34 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch AddressDialog",
+      "request": "launch",
+      "mainClass": "dev_java.weak3.AddressBook.AddressDialog",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch JTable7Dialog",
+      "request": "launch",
+      "mainClass": "dev_java.weak4.d221219.JTable7Dialog",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch DeptTable7",
+      "request": "launch",
+      "mainClass": "dev_java.weak4.d221219.DeptTable7",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch Button1Main",
+      "request": "launch",
+      "mainClass": "dev_java.weak4.d221219.Button1Main",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
       "name": "Launch DeptList1",
       "request": "launch",
       "mainClass": "dev_java.weak3.d221216.DeptList1",
