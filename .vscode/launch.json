@@ -6,6 +6,27 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch CarVOMain",
+      "request": "launch",
+      "mainClass": "dev_java.weak4.d221220.CarVOMain",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch VectorCRUD",
+      "request": "launch",
+      "mainClass": "dev_java.weak4.d221220.VectorCRUD",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch List2",
+      "request": "launch",
+      "mainClass": "dev_java.weak4.d221220.List2",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
       "name": "Launch AddressDialog",
       "request": "launch",
       "mainClass": "dev_java.weak3.AddressBook.AddressDialog",

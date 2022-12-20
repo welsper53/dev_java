@@ -1,4 +1,5 @@
 {
   "java.compile.nullAnalysis.mode": "automatic",
-  "sync.gist": "welsper53"
+  "sync.gist": "",
+  "java.configuration.updateBuildConfiguration": "interactive"
 }
