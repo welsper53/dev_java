@@ -42,13 +42,10 @@ public class VectorCRUD {
      * 벡터에 부서정보 수정하기 - 있는 것을 변경
      * 
      * @param deptno 수정하고자 하는 부서번호
-     * 
      * @param user_dname 수정하고자 하는 부서명
-     * 
      * @param user_loc 수정하고자 하는 지역
-     * 
      * @return 1이면 성공, 0이면 수정 실패
-     */
+     ************************************************************* */
     public int deptUpdate(int deptno, String user_dname, String user_loc) {
         System.out.println("\n부서정보 수정 호출 : " + deptno + ", " + user_dname + ", " + user_loc);
         String[] oneRow = null;
@@ -64,6 +61,7 @@ public class VectorCRUD {
         }
         // 1이면 성공, 0이면 실패
         int result = 0;
+        here:
         for (int i = 0; i < vdept.size(); i++) {
             String[] row = vdept.get(i);
             for (int j = 0; j < row.length; j++) {
@@ -71,16 +69,22 @@ public class VectorCRUD {
                 deptno2 = Integer.parseInt(row[0]);
                 if (deptno == deptno2) {
                     String[] updRow = { oneRow[0], user_dname, user_loc };
-                    vdept.set(i, updRow);
+                    // vdept.set(i, updRow);
+                    // 수정이라 말하고 입력으로 처리함 - 한 셀씩 수정
+                    vdept.remove(i);
+                    // Vector를 사용하면 배열의 모든 단점을 보완함 - 고정, 타입단점
+                    // 기본 : Vector<Object>
+                    vdept.add(i, updRow);
                     result = 1;
-                    break;
+                    // break문만 사용 시 이중 for문에서 내부 for문만을 탈출하게 되는데
+                    // 여기서 외부 for문을 빠져나가야하므로 라벨문을 붙여서 처리한다
+                    break here;
                 } else {
                     System.out.println("선택한 부서번호와 벡터에서 가져온 부서번호가 다르다");
                 }
-            }
-
-        }
-
+            } // end of String[] <-inner for
+        } // end of Vector <- 바깥쪽 for문에 라벨문을 사용할 것
+        getDeptList();
         return result;
     } // end of deptUpdate()
 
@@ -174,7 +178,6 @@ public class VectorCRUD {
         user_dname = st.nextToken();
         user_loc = st.nextToken();
         int result2 = vCrud.deptUpdate(user_deptno, user_dname, user_loc);
-        vCrud.getDeptList();
 
         // 삭제 테스트
         System.out.println("\n====삭제 테스트====");

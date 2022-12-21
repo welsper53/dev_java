@@ -6,6 +6,55 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch CalculatorApp",
+      "request": "launch",
+      "mainClass": "dev_java.weak4.d221221.CalculatorApp",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch A1",
+      "request": "launch",
+      "mainClass": "dev_java.weak4.d221221.A1",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch Operator12Form",
+      "request": "launch",
+      "mainClass": "dev_java.weak4.d221221.Operator12Form",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch Test2",
+      "request": "launch",
+      "mainClass": "dev_java.weak4.d221221.test.Test2",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch Run",
+      "request": "launch",
+      "mainClass": "dev_java.weak4.d221221.test.Run",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch Test",
+      "request": "launch",
+      "mainClass": "dev_java.weak4.d221221.test.Test",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch VectorCRUD2",
+      "request": "launch",
+      "mainClass": "dev_java.weak4.d221220.VectorCRUD2",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
       "name": "Launch CarVOMain",
       "request": "launch",
       "mainClass": "dev_java.weak4.d221220.CarVOMain",
