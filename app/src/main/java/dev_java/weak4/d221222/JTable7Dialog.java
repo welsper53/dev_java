@@ -146,7 +146,7 @@ public class JTable7Dialog extends JDialog implements ActionListener{
 		//부모창에서 set메소드 호출시 파라미터로 넘겨준 값으로 초기화할것.
 		else{
 			System.out.println("(다이얼)pdVO != null");
-			System.out.println("(다이얼)부서정보 있음");
+			System.out.println("(다이얼)부서테이블 있음");
 			setDeptno(String.valueOf(pdVO.getDeptno()));
 			setDname(pdVO.getDname());
 			setLoc(pdVO.getLoc());
@@ -178,6 +178,7 @@ public class JTable7Dialog extends JDialog implements ActionListener{
 				System.out.println("(다이얼)입력모드");
                 
 				if (isOk) {
+					System.out.println("(다이얼)새로운부서 추가");
 					DeptVO insVO = DeptVO.builder().deptno(Integer.parseInt(getDeptno())).dname(getDname()).loc(getLoc()).build();
 					System.out.println("before : " + DeptTable7.vdata.size());
 					DeptTable7.vdata.add(insVO);
@@ -200,12 +201,13 @@ public class JTable7Dialog extends JDialog implements ActionListener{
 					// 벡터에서 꺼낸 DeptVO의 부서번호가 같니?
 					if (pdVO.getDeptno() == comVO.getDeptno()) {
 						if (isOk) {
+							System.out.println("(다이얼)부서 수정했습니다.");
 							// 사용자가 입력한 부서정보를 새로 가져와서 DeptVO에 담기
 							DeptVO updVO = DeptVO.builder().deptno(Integer.parseInt(getDeptno())).dname(getDname()).loc(getLoc()).build();
 							DeptTable7.vdata.set(index, updVO);
 							break;
 						} else {
-							JOptionPane.showMessageDialog(this, "중복검사하세요.", "WARN", JOptionPane.WARNING_MESSAGE);
+							JOptionPane.showMessageDialog(this, "(다이얼)중복검사하세요.", "WARN", JOptionPane.WARNING_MESSAGE);
 						}
 						this.dispose();
 					}
@@ -231,10 +233,10 @@ public class JTable7Dialog extends JDialog implements ActionListener{
 			System.out.println("index : " + index);
 
 			if (DeptTable7.vdata.size() == 0) {
-				System.out.println("부서가 비어있습니다.");
+				System.out.println("(다이얼)부서가 비어있습니다.");
 				isOk = true;
 			} else {
-				System.out.println("부서가 있습니다.");
+				System.out.println("(다이얼)부서가 있습니다.");
 
 				for (int i=0; i<DeptTable7.vdata.size(); i++) {
 					DeptVO pdVO = DeptTable7.vdata.get(i);
@@ -242,12 +244,12 @@ public class JTable7Dialog extends JDialog implements ActionListener{
 					
 	
 					if (index == pdVO.getDeptno()) {
-						System.out.println("중복되는 부서번호가 있습니다.");
+						System.out.println("(다이얼)중복되는 부서번호가 있습니다.");
 						JOptionPane.showMessageDialog(this, "중복되는 부서번호가 있습니다.", "WARN", JOptionPane.WARNING_MESSAGE);
 						isOk = false;
 						// break;
 					} else {
-						System.out.println("없음");
+						System.out.println("(다이얼)중복되는 부서번호가 없습니다.");
 						isOk = true;
 					}
 				}

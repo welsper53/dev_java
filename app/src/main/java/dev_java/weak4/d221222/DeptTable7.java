@@ -14,7 +14,7 @@ import java.awt.Color;
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.Arrays;
+// import java.util.Arrays;
 import java.util.Vector;
 
 public class DeptTable7 extends JFrame implements ActionListener { // DeptTable7 is a JFrame
@@ -129,36 +129,41 @@ public class DeptTable7 extends JFrame implements ActionListener { // DeptTable7
         // 너 입력버튼 누른거야?
         else if (obj == jbtn_ins) {
             System.out.println("입력버튼");
-            int index = jtb_dept.getSelectedRow();
-            jtd7.isOk=false;
+            jtd7.isOk = false;
+            // int index = jtb_dept.getSelectedRow();
             jtd7.set("입력", true, null, true);
         }
-        
+
         // 너 수정 하려고?
         else if (obj == jbtn_upd) {
             System.out.println("수정버튼");
+            jtd7.isOk = false;
             // 어떤 로우를 수정 할거니?
             // JTable목록에서 선택한 로우의 index를 값을 가져옴
             int index = jtb_dept.getSelectedRow();
             // 데이터셋 객체로 벡털르 사용 중이니 벡터에서 꺼낸 값을 String[] 초기화
             // 테이블의 양식 폼인 JTable 이벤트로 얻어옴
             DeptVO pdVO = vdata.get(index);
-            System.out.println("dno : " + pdVO.getDeptno() + ", dname : " + pdVO.getDname() + ", loc : " + pdVO.getLoc());
+            System.out
+                    .println("dno : " + pdVO.getDeptno() + ", dname : " + pdVO.getDname() + ", loc : " + pdVO.getLoc());
             jtd7.set("수정", true, pdVO, true);
         }
-        
+
         // 너 삭제 하려고?
         else if (obj == jbtn_del) {
             System.out.println("삭제버튼");
             // 어떤 로우를 수정 할거니?
             // JTable목록에서 선택한 로우의 index를 값을 가져옴
             int index = jtb_dept.getSelectedRow();
-            // 데이터셋 객체로 벡털르 사용 중이니 벡터에서 꺼낸 값을 String[] 초기화
-            // 테이블의 양식 폼인 JTable 이벤트로 얻어옴
-            DeptTable7.vdata.remove(index);
+
+            // -1은 end of file의미; 끝까지 찾았는데 없다
+            if (index == -1) {
+                JOptionPane.showMessageDialog(this, "삭제할 부서를 선택하세요.", "WARN", JOptionPane.WARNING_MESSAGE);
+            }
+            vdata.remove(index);
             refreshData();
         }
-        
+
         // 너 상세보기 원해?
         else if (obj == jbtn_det) {
             System.out.println("상세보기버튼");
@@ -173,8 +178,7 @@ public class DeptTable7 extends JFrame implements ActionListener { // DeptTable7
                 return;
             }
 
-
-            if (DeptTable7.vdata.size() <= 0) {
+            if (vdata.size() <= 0) {
                 JOptionPane.showMessageDialog(this, "조회결과가 없습니다.", "WARN", JOptionPane.WARNING_MESSAGE);
                 return;
             }
@@ -184,7 +188,7 @@ public class DeptTable7 extends JFrame implements ActionListener { // DeptTable7
             // String[] oneRow = vdata.get(index);
             jtd7.set("상세보기", true, pdVO, false);
         }
-        
+
     }
 
     public static void main(String[] args) {
