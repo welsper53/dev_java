@@ -6,6 +6,55 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch TalkClient",
+      "request": "launch",
+      "mainClass": "dev_java.weak4.d221223.network2.TalkClient",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch TalkServer",
+      "request": "launch",
+      "mainClass": "dev_java.weak4.d221223.network2.TalkServer",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch LoginForm",
+      "request": "launch",
+      "mainClass": "dev_java.weak4.d221223.network1.LoginForm",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch DeptTable7",
+      "request": "launch",
+      "mainClass": "dev_java.weak4.d221223.deptTable.DeptTable7",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch TimeClentView",
+      "request": "launch",
+      "mainClass": "dev_java.weak4.d221223.network1.TimeClentView",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch TimeClient",
+      "request": "launch",
+      "mainClass": "dev_java.weak4.d221223.network1.TimeClient",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch TimeServer",
+      "request": "launch",
+      "mainClass": "dev_java.weak4.d221223.network1.TimeServer",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
       "name": "Launch JTable7Dialog",
       "request": "launch",
       "mainClass": "dev_java.weak4.d221222.JTable7Dialog",
