@@ -31,14 +31,48 @@ public class VectorCRUD2 {
         return result;
     } // end of deptInsert()
 
-    /* *************************************************************
+    /*
+     * *************************************************************
      * 벡터에 부서정보 수정하기 - 있는 것을 변경
      * 
      * @param deptno 수정하고자 하는 부서번호
+     * 
      * @param user_dname 수정하고자 하는 부서명
+     * 
      * @param user_loc 수정하고자 하는 지역
+     * 
      * @return 1이면 성공, 0이면 수정 실패
-     ************************************************************* */
+     */
+    public int deptUpdate(DeptVO pdVO) {
+        Scanner s = new Scanner(System.in);
+        int result = 0;
+        System.out.println("\n부서정보 수정 호출");
+        System.out.println("deptUpdate 호출 : 입력받은 부서번호는 " + pdVO.getDeptno());
+
+        for (int i = 0; i < vdept2.size(); i++) {
+            DeptVO dVo = vdept2.get(i);
+
+            if (pdVO.getDeptno() == dVo.getDeptno()) {
+                System.out.print("수정할 부서번호,부서명,지역 (공백으로 구분) : ");
+                String dname = s.next();
+                String loc = s.next();
+                System.out.println("부서명 : " + dname + ", 지역 : " + loc);
+
+                // dVo.builder().dname(dname).loc(loc).build();
+                // vdept2.set(i, dVo);
+
+                dVo.setDname(dname);
+                dVo.setLoc(loc);
+                result = 1;
+            }
+        }
+        if (result == 0) {
+            System.out.println("저장되어 있지않은 부서번호입니다.");
+        }
+
+        return result;
+    } // end of deptUpdate(DeptVO deptVO)
+
     public int deptUpdate(int index, String dname, String loc) {
         int result = 0;
         System.out.println("\n부서정보 수정 호출");
@@ -58,7 +92,7 @@ public class VectorCRUD2 {
         }
 
         return result;
-    } // end of deptUpdate()
+    } // end of deptUpdate(int index, String dname, String loc)
 
     // 벡터에 부서정보 삭제하기 - 있는 것을 삭제
     // --> 중요한 문제임
@@ -122,40 +156,72 @@ public class VectorCRUD2 {
             // return;
         }
 
-        // 수정 테스트
-        System.out.println("\n====수정 테스트====");
-        System.out.print("수정할 부서번호,부서명,지역 (공백으로 구분) : ");
-        int user = Integer.parseInt(s.next());
-        String dname = s.next();
-        String loc = s.next();
+        // 수정과 삭제 메뉴 선택 담기
+        int result2 = 0;
+        int choice = 0;
+        System.out.println("수정은 1, 삭제는 2를 입력하세요");
+        choice = s.nextInt();
 
-        int result2 = vCrud2.deptUpdate(user, dname, loc);
-        if (result2 == 1) {
-            JOptionPane.showMessageDialog(null, "수정되었습니다.");
-            vCrud2.getDeptList();
-            // return;
+        if (choice == 1) {
+            System.out.println("수정하고자 하는 부서번호를 입력하세요 : ");
+            int u_deptno = s.nextInt();
+            DeptVO updVO = DeptVO.builder().deptno(u_deptno).build();
+            result2 = vCrud2.deptUpdate(updVO);
+
+            if (result2 == 1) {
+                System.out.println("수정처리 되었습니다.");
+                vCrud2.getDeptList();
+            } else {
+                System.out.println("수정 실패 하였습니다.");
+            }
+        } else if (choice == 2) {
+            vCrud2.deptDelete(choice);
+        } else {
+            System.err.println("잘못된 입력입니다.");
         }
 
-        // 삭제 테스트
-        System.out.println("\n====삭제 테스트====");
-        System.out.print("삭제할 부서번호 : ");
-        user = s.nextInt();
+        // 이전에 작성한 코드들
+        // 현재 버전에서는 입력값에 따라 수정, 삭제 모드로 빠지게 작성함
+        if (result2 == 3) {
+            // 수정 테스트
+            System.out.println("\n====수정 테스트====");
+            System.out.print("수정할 부서번호,부서명,지역 (공백으로 구분) : ");
+            int user = Integer.parseInt(s.next());
+            String dname = s.next();
+            String loc = s.next();
 
-        int result3 = vCrud2.deptDelete(user);
-        if (result3 == 1) {
-            JOptionPane.showMessageDialog(null, "삭제되었습니다.");
-            vCrud2.getDeptList();
-            // return;
+            // int result2 = vCrud2.deptUpdate(user, dname, loc);
+            if (result2 == 1) {
+                JOptionPane.showMessageDialog(null, "수정되었습니다.");
+                vCrud2.getDeptList();
+                // return;
+            }else {
+                System.out.println("수정 실패했습니다.");
+            }
+
+            // 삭제 테스트
+            System.out.println("\n====삭제 테스트====");
+            System.out.print("삭제할 부서번호 : ");
+            user = s.nextInt();
+
+            int result3 = vCrud2.deptDelete(user);
+            if (result3 == 1) {
+                JOptionPane.showMessageDialog(null, "삭제되었습니다.");
+                vCrud2.getDeptList();
+                // return;
+            } else {
+                System.out.println("삭제 실패했습니다.");
+            }
         }
 
         // // 상세보기 테스트
         // System.out.println("\n====상세보기 테스트====");
         // System.out.print("상세보기 부서번호 : ");
-        // user = s.nextInt();
+        // int user = s.nextInt();
         // DeptVO result4 = vCrud2.deptDetail(user);
 
         // System.out.println(result4.toString());
 
-        // s.close();
+        s.close();
     } // end of main
 }
