@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch JDBCTest",
+      "request": "launch",
+      "mainClass": "dev_java.oracle.JDBCTest",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
       "name": "Launch TalkClient",
       "request": "launch",
       "mainClass": "dev_java.weak4.d221223.network2.TalkClient",
