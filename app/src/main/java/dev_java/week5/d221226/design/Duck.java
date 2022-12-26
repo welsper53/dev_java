@@ -1,4 +1,4 @@
-package dev_java.week5.design;
+package dev_java.week5.d221226.design;
 /*
  * 추상클래스
  * 단독으로 인스턴스화 할 수 없다. 반드시 구현체 클래스 있어야 함. 메소드 오버라이딩
