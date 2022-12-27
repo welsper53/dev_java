@@ -6,6 +6,62 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch MySonata",
+      "request": "launch",
+      "mainClass": "dev_java.week5.d221227.MySonata",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch BananaServer",
+      "request": "launch",
+      "mainClass": "dev_java.week5.d221227.BananaServer",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch ServerTest",
+      "request": "launch",
+      "mainClass": "dev_java.week5.d221227.ServerTest",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch KiwiServer",
+      "request": "launch",
+      "mainClass": "dev_java.week5.d221227.network3_1.KiwiServer",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch BananaServer",
+      "request": "launch",
+      "mainClass": "dev_java.week5.d221227.network3_1.BananaServer",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch MainThread1_1",
+      "request": "launch",
+      "mainClass": "dev_java.week5.d221227.MainThread1_1",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch TalkClient",
+      "request": "launch",
+      "mainClass": "dev_java.week5.d221227.network3_1.TalkClient",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch TalkServer2",
+      "request": "launch",
+      "mainClass": "dev_java.week5.d221227.network3_1.TalkServer2",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
       "name": "Launch TalkClient",
       "request": "launch",
       "mainClass": "dev_java.week5.d221226.network3.TalkClient",
