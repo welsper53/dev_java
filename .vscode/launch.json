@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch SupNSubMain",
+      "request": "launch",
+      "mainClass": "dev_java.week5.d221228.SupNSubMain",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
       "name": "Launch MySonata",
       "request": "launch",
       "mainClass": "dev_java.week5.d221227.MySonata",
