@@ -38,8 +38,19 @@ public class SupNSubMain {
         sp.m();
 
         System.out.println("=======형변환========");
-        sub = (Sub) sup; // sub = new Sup();
+        // // 아래는 런타임에러 발생
+        // // sup의 실제 생성된 객체는 Super타입이다
+        // // 따라서 강제 형전환을 하더라도 문법적인 문제는 해결을 했어도
+        // // 실제로 가리키는 객체는 상위 객체이므로 에러가 발생
+        // sub = (Sub) sup; // sub = new Sup();
+
+        // sp의 타입은 Sup이지만 Sub강제형전환한다
+        // sp의 실제 생성된 객체는 Sub타입이다
+        // 타입은 달라서 강제 형전환을 해야 하지만 실제 가리키는 객체가 자손 타입이므로
+        // 에러가 발생하지 않는다
+        sub = (Sub)sp;
         sub.m();
         int i = (int) 23.5d;
+        System.out.println(i);
     }
 }

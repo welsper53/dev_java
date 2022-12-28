@@ -6,6 +6,27 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch PriorityTest",
+      "request": "launch",
+      "mainClass": "dev_java.week5.d221228.PriorityTest",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch StopThreadTest",
+      "request": "launch",
+      "mainClass": "dev_java.week5.d221228.StopThreadTest",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch DeamonThreadTest",
+      "request": "launch",
+      "mainClass": "dev_java.week5.d221228.DeamonThreadTest",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
       "name": "Launch SupNSubMain",
       "request": "launch",
       "mainClass": "dev_java.week5.d221228.SupNSubMain",
