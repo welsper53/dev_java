@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch TomcatServer",
+      "request": "launch",
+      "mainClass": "dev_java.week5.d221229.TomcatServer",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
       "name": "Launch MapTest3",
       "request": "launch",
       "mainClass": "dev_java.week5.d221229.MapTest3",
