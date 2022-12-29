@@ -6,6 +6,55 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch MapTest2",
+      "request": "launch",
+      "mainClass": "dev_java.week5.d221229.MapTest2",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch MapTest1",
+      "request": "launch",
+      "mainClass": "dev_java.week5.d221229.MapTest1",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch DeptList",
+      "request": "launch",
+      "mainClass": "dev_java.week5.d221229.oracle.DeptList",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch DeptList",
+      "request": "launch",
+      "mainClass": "dev_java.oracle.DeptList",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch JDBCTest2",
+      "request": "launch",
+      "mainClass": "dev_java.oracle.JDBCTest2",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch DBConnectionMgr",
+      "request": "launch",
+      "mainClass": "dev_java.util.DBConnectionMgr",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch URLEx",
+      "request": "launch",
+      "mainClass": "dev_java.week5.d221228.URLEx",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
       "name": "Launch PriorityTest",
       "request": "launch",
       "mainClass": "dev_java.week5.d221228.PriorityTest",
