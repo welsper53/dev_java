@@ -16,12 +16,14 @@ public class MapTest2 {
         rMap.put("dname", "인사부");
         rMap.put("loc", "서울");
         list.add(rMap);         // 출력 : list.get(0);
-        
+
+        rMap = new HashMap<>(); 
         rMap.put("deptno", 20);
         rMap.put("dname", "개발부");
         rMap.put("loc", "제주");
         list.add(rMap);         // 출력 : list.get(1);
         
+        rMap = new HashMap<>(); 
         rMap.put("deptno", 30);
         rMap.put("dname", "총무부");
         rMap.put("loc", "부산");
