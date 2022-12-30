@@ -6,6 +6,20 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch NetworkClient",
+      "request": "launch",
+      "mainClass": "dev_java.week5.d221230.NetworkClient",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch NetworkServer",
+      "request": "launch",
+      "mainClass": "dev_java.week5.d221230.NetworkServer",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
       "name": "Launch TomcatServer",
       "request": "launch",
       "mainClass": "dev_java.week5.d221229.TomcatServer",
