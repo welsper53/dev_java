@@ -6,6 +6,76 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch Exam1",
+      "request": "launch",
+      "mainClass": "dev_java.week5.d221230.exam.Exam1",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch NetworkServer2",
+      "request": "launch",
+      "mainClass": "dev_java.week5.d221230.exam.NetworkServer2",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch NetworkClient2",
+      "request": "launch",
+      "mainClass": "dev_java.week5.d221230.exam.NetworkClient2",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch NetworkServer",
+      "request": "launch",
+      "mainClass": "dev_java.week5.d221230.exam.NetworkServer",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch Exam2",
+      "request": "launch",
+      "mainClass": "dev_java.week5.d221230_1.Exam2",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch FileOutput",
+      "request": "launch",
+      "mainClass": "dev_java.week5.d221230_1.FileOutput",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch NetworkClient2",
+      "request": "launch",
+      "mainClass": "dev_java.week5.d221230_1.NetworkClient2",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch NetworkServer2",
+      "request": "launch",
+      "mainClass": "dev_java.week5.d221230_1.NetworkServer2",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch NetworkClient",
+      "request": "launch",
+      "mainClass": "dev_java.week5.d221230_1.NetworkClient",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Launch NetworkServer",
+      "request": "launch",
+      "mainClass": "dev_java.week5.d221230_1.NetworkServer",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
       "name": "Launch NetworkClient2",
       "request": "launch",
       "mainClass": "dev_java.week5.d221230.NetworkClient2",
