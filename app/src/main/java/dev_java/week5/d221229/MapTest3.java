@@ -35,14 +35,14 @@ public class MapTest3 {
         // mem_pw=123, mem_name=토마토, mem_id=tomato}
         // System.out.println(list.get(0).get("mem_name")); // 토마토
 
-        // pMap = new HashMap<>(); // 새로운 객체가 생성됨 <- 타입은 동일
+        pMap = new HashMap<>(); // 새로운 객체가 생성됨 <- 타입은 동일
         pMap.put("mem_id", "banana");
         pMap.put("mem_name", "바나나");
         pMap.put("mem_pw", "123");
         pMap.put("mem_gender", "여자");
         list.add(pMap);
 
-        // pMap = new HashMap<>();
+        pMap = new HashMap<>();
         pMap.put("mem_id", "kiwi");
         pMap.put("mem_name", "키위");
         pMap.put("mem_pw", "123");
